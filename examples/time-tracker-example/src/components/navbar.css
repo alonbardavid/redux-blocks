@@ -1,0 +1,9 @@
+.navbar {
+    padding-right:30px;
+}
+.navbar-inverse .navbar-nav a.active,
+.navbar-inverse .navbar-nav a.active:hover,
+.navbar-inverse .navbar-nav a.active:focus {
+    color: #fff;
+    background-color: #080808;
+}

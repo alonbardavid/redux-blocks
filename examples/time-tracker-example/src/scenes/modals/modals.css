@@ -1,0 +1,6 @@
+.modal-backdrop {
+    opacity: .5;
+}
+.modal {
+    display: block !important;
+}

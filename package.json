@@ -1,0 +1,49 @@
+{
+  "name": "redux-blocks",
+  "version": "0.0.1",
+  "author": "alonbd",
+  "browser": "dist/redux-blocks.js",
+  "main": "lib/index.js",
+  "module": "es/index.js",
+  "jsnext:main": "es/index.js",
+  "description": "Redux module composition library",
+  "repository": "https://github.com/alonbardavid/redux-blocks.git",
+  "homepage": "https://github.com/alonbardavid/redux-blocks.git",
+  "devDependencies": {
+    "babel-cli": "^6.24.0",
+    "babel-core": "^6.24.0",
+    "babel-loader": "^6.4.1",
+    "babel-preset-es2015": "^6.24.0",
+    "babel-preset-react": "^6.23.0",
+    "babel-preset-stage-2": "^6.22.0",
+    "cross-env": "^4.0.0",
+    "jest": "^19.0.2",
+    "rimraf": "^2.6.1",
+    "rollup": "^0.41.6",
+    "rollup-plugin-babel": "^2.7.1",
+    "rollup-plugin-node-resolve": "^3.0.0",
+    "rollup-plugin-replace": "^1.1.1",
+    "rollup-plugin-uglify": "^1.0.1",
+    "webpack": "^2.3.3"
+  },
+  "dependencies": {
+    "lodash": "^4.17.4",
+    "redux-saga": "^0.14.4"
+  },
+  "scripts": {
+    "clean": "rimraf lib dist es coverage",
+    "lint": "eslint src test build",
+    "test": "cross-env BABEL_ENV=commonjs jest",
+    "test:watch": "npm test -- --watch",
+    "test:cov": "npm test -- --coverage",
+    "build:commonjs": "cross-env BABEL_ENV=commonjs babel src --out-dir lib",
+    "build:es": "cross-env BABEL_ENV=es babel src --out-dir es",
+    "build:umd": "npm run build:umd:index && npm run build:umd:saga && npm run build:umd:index:min && npm run build:umd:saga:min ",
+    "build:umd:index": "cross-env BABEL_ENV=es NODE_ENV=development rollup -c -i src/index.js -o dist/redux-blocks.js",
+    "build:umd:saga": "cross-env BABEL_ENV=es NODE_ENV=development rollup -c -i src/saga.js -o dist/redux-blocks.saga.js",
+    "build:umd:index:min": "cross-env BABEL_ENV=es NODE_ENV=production rollup -c -i src/index.js -o dist/redux-blocks.min.js",
+    "build:umd:saga:min": "cross-env BABEL_ENV=es NODE_ENV=production rollup -c -i src/saga.js -o dist/redux-blocks.saga.min.js",
+    "build": "npm run build:commonjs && npm run build:es",
+    "prepublish": "npm run clean && npm run test && npm run build "
+  }
+}

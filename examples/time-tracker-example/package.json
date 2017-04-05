@@ -1,0 +1,30 @@
+{
+  "name": "time-tracker-example",
+  "version": "0.1.0",
+  "private": true,
+  "devDependencies": {
+    "babel-plugin-transform-runtime": "^6.23.0",
+    "react-scripts": "0.9.0"
+  },
+  "dependencies": {
+    "babel-polyfill": "^6.23.0",
+    "bootstrap": "^3.3.7",
+    "dexie": "^2.0.0-beta.10",
+    "react": "^15.4.2",
+    "react-dom": "^15.4.2",
+    "react-redux": "^5.0.3",
+    "react-router": "^4.0.0-beta.8",
+    "react-router-dom": "^4.0.0-beta.8",
+    "react-router-redux": "^5.0.0-alpha.4",
+    "redux": "^3.6.0",
+    "redux-blocks": "file:../../",
+    "redux-saga": "^0.14.3",
+    "seamless-immutable": "^7.1.1"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject"
+  }
+}

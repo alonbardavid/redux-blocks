@@ -1,0 +1,5 @@
+@media (min-width:768px){
+    .app .container {
+        width: 720px;
+    }
+}
