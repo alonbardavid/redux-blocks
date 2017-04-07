@@ -1,6 +1,6 @@
 {
   "name": "redux-blocks",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "author": "alonbd",
   "browser": "dist/redux-blocks.js",
   "main": "lib/index.js",
