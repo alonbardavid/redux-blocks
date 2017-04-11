@@ -16,6 +16,7 @@ to look at the tests for [mount](test/internal/mount.spec.js) and [merge](test/i
 
 You can also look at the real world example application code [here](examples/time-tracker-example/src/blocks/index.js) .
 
+A more details explanation can be found [here](http://www.alonbd.com/posts/redux_module_composition)
 
 ### Usage
 
